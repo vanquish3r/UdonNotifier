@@ -32,8 +32,8 @@ namespace DeanCode
         private float GetOffset()
         {
             if (manager.layout == NotificationLayout.Bottom)
-                return 20f - Offset() * 10f * manager.scale;
-            return Offset() * 10f * manager.scale - 20f;;
+                return manager.verticalOffset - Offset() * manager.spacing * manager.scale;
+            return Offset() * manager.spacing * manager.scale - manager.verticalOffset;
         }
 
         public void Update() 

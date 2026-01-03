@@ -12,6 +12,11 @@ namespace DeanCode
         Error,
         Player,
         Time,
+        Mic,
+        QuietMic,
+        Megaphone,
+        IntercomOn,
+        IntercomOff,
     }
 
     [SerializeField]
@@ -27,6 +32,8 @@ namespace DeanCode
         [Header("Settings")]
         [SerializeField] public float scale = 1.0f;
         [SerializeField] public NotificationLayout layout = NotificationLayout.Bottom;
+        [SerializeField] public float spacing = 10f;
+        [SerializeField] public float verticalOffset = 20f;
 
         [Header("Asset References")]
         [SerializeField] private Notification notificationPrefab;
